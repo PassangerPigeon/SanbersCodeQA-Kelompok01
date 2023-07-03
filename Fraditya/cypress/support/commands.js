@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import 'cypress-xpath';
+
+// This line is optional, it adds the `cy.xpath()` command for convenience.
+Cypress.Commands.add('xpath', { prevSubject: 'optional' }, (subject, xpath) => cy.wrap(subject, { log: false }).xpath(xpath));
+
+import 'cypress-xpath';
+
+Cypress.Commands.add('xpath', (xpath, options = {}) => {
+  return cy.document().then((doc) => {
+    const elements = doc.evaluate(xpath, doc, null, XPathResult.ANY_TYPE, null);
+    const nodes = [];
+    let node = elements.iterateNext();
+
+    while (node) {
+      nodes.push(node);
+      node = elements.iterateNext();
+    }
+
+    if (options.multiple) {
+      return nodes;
+    } else {
+      return nodes[0];
+    }
+  });
+});
