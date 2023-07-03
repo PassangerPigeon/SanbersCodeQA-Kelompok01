@@ -1,14 +1,15 @@
 import unittest
 import time
 from selenium.webdriver.common.by import By
+from POM.loginPOM import loginPage
 
 def testlogin(self, driver):
         # steps
         driver.find_element(By.ID,"login2").click()
         time.sleep(2)
-        driver.find_element(By.ID,"loginusername").send_keys("adhit") # isi email
-        driver.find_element(By.ID,"loginpassword").send_keys("12345") # isi password
-        driver.find_element(By.CSS_SELECTOR,"[onclick='logIn()']").click()
+        driver.find_element(*loginPage.addUsername).send_keys("adhit") # isi email
+        driver.find_element(*loginPage.addPassword).send_keys("12345") # isi password
+        driver.find_element(*loginPage.loginClick).click()
         # validasi
         time.sleep(3)
         response_data = driver.find_element(By.ID,'nameofuser').text
@@ -18,9 +19,9 @@ def testFailedloginUserNotExist(self, driver, username, password):
         # steps
         driver.find_element(By.ID,"login2").click()
         time.sleep(2)
-        driver.find_element(By.ID,"loginusername").send_keys(username) # isi email
-        driver.find_element(By.ID,"loginpassword").send_keys(password) # isi password
-        driver.find_element(By.CSS_SELECTOR,"[onclick='logIn()']").click()
+        driver.find_element(*loginPage.addUsername).send_keys(username) # isi email
+        driver.find_element(*loginPage.addPassword).send_keys(password) # isi password
+        driver.find_element(*loginPage.loginClick).click()
         #validasi
         time.sleep(3)
         alert = driver.switch_to.alert
@@ -32,13 +33,13 @@ def testFailedloginWrongPass(self, driver, username, password):
         # steps
         driver.find_element(By.ID,"login2").click()
         time.sleep(2)
-        driver.find_element(By.ID,"loginusername").send_keys(username) # isi email
-        driver.find_element(By.ID,"loginpassword").send_keys(password) # isi password
-        driver.find_element(By.CSS_SELECTOR,"[onclick='logIn()']").click()
+        driver.find_element(*loginPage.addUsername).send_keys(username) # isi email
+        driver.find_element(*loginPage.addPassword).send_keys(password) # isi password
+        driver.find_element(*loginPage.loginClick).click()
         #validasi
         time.sleep(3)
         alert = driver.switch_to.alert
         alert_data = alert.text
-        self.assertIn('Wrong assword', alert_data)
+        self.assertIn('Wrong password', alert_data)
         alert.accept
      
