@@ -20,7 +20,40 @@ class TestPlaceOrder(unittest.TestCase):
         time.sleep(3)
         basePlaceOrder.testPlaceOrder(self, driver)
         
-
+    def test_b_place_two_order(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        basePlaceOrder.testPlaceTwoOrder(self, driver)
+    
+    def test_c_place_empty_order(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        basePlaceOrder.testPlaceEmptyOrder(self, driver)
+        
+    def test_d_place_order_name_only(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        basePlaceOrder.testPlaceOrderNameOnly(self, driver)
+        
+    def test_e_place_order_card_only(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        basePlaceOrder.testPlaceOrderCardOnly(self, driver)
+        
+    def test_f_place_order_card_only(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        basePlaceOrder.testPlaceOrderNameandCreditOnly(self, driver)
 
 if __name__ == "__main__":
     unittest.main()

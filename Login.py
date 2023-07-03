@@ -33,7 +33,28 @@ class TestLogin(unittest.TestCase):
         driver.get("https://www.demoblaze.com/") # buka situs
         time.sleep(3)
         baseLogin.testFailedloginWrongPass(self, driver,'adhit','54321')
-
-
+        
+    def test_d_logout(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        baseLogin.testLogout(self, driver)
+    
+    def test_e_noUsername(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        baseLogin.testFailedloginNoUsername(self, driver)
+    
+    def test_f_noPassword(self):
+        # steps
+        driver = self.browser #buka web browser
+        driver.get("https://www.demoblaze.com/") # buka situs
+        time.sleep(3)
+        baseLogin.testFailedloginNoPassword(self, driver)
+        
+        
 if __name__ == "__main__":
     unittest.main()
