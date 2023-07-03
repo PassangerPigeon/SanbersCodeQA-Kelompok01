@@ -49,3 +49,6 @@ Cypress.Commands.add('xpath', (xpath, options = {}) => {
     }
   });
 });
+
+import 'cypress-real-events/support';
+
