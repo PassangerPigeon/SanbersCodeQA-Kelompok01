@@ -25,4 +25,12 @@ Dokumentasi run script:
 - cart:
 ![cart0](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/57736796/3c36c06d-a61d-433a-8dbe-a19ac92c4111)
 
+- Fraditya
+- Sign Up :
+![signup](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/136451494/c6d409e1-6363-48c2-8736-3ec63fe5b0b6)
+- Add to Cart :
+![add_to_cart](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/136451494/f500f80e-d373-4a1f-91ce-b4d513c7baa9)
+
+  
+
 
