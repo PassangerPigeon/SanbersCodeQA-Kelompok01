@@ -28,6 +28,8 @@ Dokumentasi run script:
 - Fraditya
 - Sign Up :
 ![signup](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/136451494/c6d409e1-6363-48c2-8736-3ec63fe5b0b6)
+- Sign Up Failed (User already exist) :
+![signup failed_user already exist](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/136451494/d643a86b-f629-4fa6-a6bb-99543f82c8ae)
 - Add to Cart :
 ![add_to_cart](https://github.com/PassangerPigeon/SanbersCodeQA-Kelompok01/assets/136451494/f500f80e-d373-4a1f-91ce-b4d513c7baa9)
 
